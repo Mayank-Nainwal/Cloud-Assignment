@@ -102,4 +102,31 @@ class Linkedlist{
         }
         System.out.println();
     }
+
+    //code added by anand kumar
+
+    public static void delete(Node head)
+    {
+        if(head == null)
+        {
+            System.out.println("Linked List is Empty");
+            return ;
+        }
+        Node curr = new Node(-1);
+        curr.next = head;
+        Node temp = curr;
+        while(head != null && head.next != null)
+        {
+            head = head.next;
+            curr = curr.next;
+        }
+        curr.next = null;
+        temp = temp.next;
+        while(temp != null)
+        {
+            System.out.print(temp.val+" ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
 }
