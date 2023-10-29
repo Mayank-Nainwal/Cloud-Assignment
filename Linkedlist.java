@@ -74,4 +74,32 @@ class Linkedlist{
             System.out.println();
         }
     }
+
+    // code added by ruchit
+    public static void add(Node head, int val)
+    {
+        Node curr;
+        if(head == null)
+        {
+            Node temp = new Node(val);
+            head = temp;
+            curr = head;
+        }
+        else 
+        {
+            curr = head;
+            while(head.next != null)
+            {
+                head = head.next;
+            }
+            Node temp = new Node(val);
+            head.next = temp;
+        }
+        while(curr != null)
+        {
+            System.out.print(curr.val+" ");
+            curr = curr.next;
+        }
+        System.out.println();
+    }
 }
