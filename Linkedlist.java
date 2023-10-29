@@ -129,4 +129,17 @@ class Linkedlist{
         }
         System.out.println();
     }
+
+    //code added by suraj gupta
+
+    public static void length(Node head)
+    {
+        int count = 0;
+        while(head != null)
+        {
+            count++;
+            head = head.next;
+        }
+        System.out.println("Length of Linked List = "+count);
+    }
 }
