@@ -129,4 +129,43 @@ class Linkedlist{
         }
         System.out.println();
     }
+
+    //code added by suraj gupta
+
+    public static void length(Node head)
+    {
+        int count = 0;
+        while(head != null)
+        {
+            count++;
+            head = head.next;
+        }
+        System.out.println("Length of Linked List = "+count);
+    }
+    //Code added by Prakash Rajput
+    public static Node reverse(Node head)
+    {
+        Node prev = null;
+        Node curr = head;
+        if(head == null)
+        {
+            System.out.println("Linked List is Empty");
+            return null;
+        }
+        while(head != null)
+        {
+            head = head.next;
+            curr.next = prev;
+            prev = curr;
+            curr = head;
+        }
+        Node temp = prev;
+        while(temp != null)
+        {
+            System.out.print(temp.val+" ");
+            temp = temp.next;
+        }
+        System.out.println();
+        return prev;
+    }
 }
